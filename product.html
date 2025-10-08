@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Card</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: #f0f0f0;
+        font-family: Arial, sans-serif;
+      }
+
+      .product-card {
+        width: 300px;
+        background-color: white;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        position: relative;
+      }
+
+      /* Sale badge */
+      .sale-badge {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        background-color: #ff4444;
+        color: white;
+        padding: 8px 15px;
+        border-radius: 20px;
+        font-size: 0.85rem;
+        font-weight: bold;
+        z-index: 10;
+      }
+
+      .product-image {
+        background-color: #f5f5f5;
+        padding: 30px;
+        text-align: center;
+        position: relative;
+      }
+
+      .product-image img {
+        width: 100%;
+        max-width: 250px;
+        height: auto;
+        object-fit: contain;
+      }
+
+      .product-details {
+        padding: 25px;
+        background-color: white;
+        text-align: left;
+      }
+
+      .product-details h3 {
+        margin: 0 0 15px 0;
+        font-size: 1.3rem;
+        color: #333;
+        font-weight: 600;
+      }
+
+      .product-details .price {
+        font-size: 1.1rem;
+        color: #666;
+        margin: 8px 0;
+      }
+
+      .product-details .description {
+        font-size: 0.9rem;
+        color: #888;
+        line-height: 1.5;
+        margin: 10px 0 20px 0;
+      }
+
+      .add-to-cart {
+        width: 100%;
+        padding: 12px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 1rem;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+      }
+
+      .add-to-cart:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+      }
+
+      .add-to-cart span {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="product-card">
+      <!-- Sale Badge -->
+      <div class="sale-badge">Sale 40% OFF</div>
+
+      <!-- Top box: Image -->
+      <div class="product-image">
+        <img
+          src="https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?w=400"
+          alt="Product"
+        />
+      </div>
+
+      <!-- Bottom box: Details -->
+      <div class="product-details">
+        <h3>Ray Phone</h3>
+        <p class="price">₹99,999</p>
+        <p class="description">
+          Experience the latest innovation with this amazing phone. Perfect for
+          your everyday needs.
+        </p>
+        <button class="add-to-cart">
+          <span>🛒 Add to Cart</span>
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
